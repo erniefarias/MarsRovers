@@ -38,6 +38,22 @@ namespace MarsRovers.Rovers
         }
 
         /// <summary>
+        /// Attempts to move the rover forward; returns true is successful;
+        /// </summary>
+        public bool TryMoveForward()
+        {
+            try
+            {
+                MoveForward();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Indicates whether the rover can move forward without crossing the
         /// map's boundaries.
         /// </summary>

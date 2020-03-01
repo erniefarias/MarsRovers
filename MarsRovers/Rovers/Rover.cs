@@ -13,10 +13,13 @@
         /// </summary>
         /// <param name="x">Initial X coordinate</param>
         /// <param name="y">Initial Y coordinate</param>
-        public Rover(int x, int y)
+        /// <param name="direction">Initial direction to face; defaults to
+        /// North if not specified.</param>
+        public Rover(int x, int y, Direction direction = Direction.North)
         {
             XCoordinate = x;
             YCoordinate = y;
+            Direction = direction;
         }
 
         public int XCoordinate { get; set; }

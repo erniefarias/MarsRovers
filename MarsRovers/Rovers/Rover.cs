@@ -2,8 +2,17 @@
 {
     public class Rover : IRover
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Rover"/> class.
+        /// </summary>
         public Rover() {}
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Rover"/> class at the given
+        /// coordinates.
+        /// </summary>
+        /// <param name="x">Initial X coordinate</param>
+        /// <param name="y">Initial Y coordinate</param>
         public Rover(int x, int y)
         {
             XCoordinate = x;

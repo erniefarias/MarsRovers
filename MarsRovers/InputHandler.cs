@@ -48,13 +48,6 @@ namespace MarsRovers
             int xCoordinate = int.Parse(parts[0]);
             int yCoordinate = int.Parse(parts[1]);
 
-            // Verify coordinates
-            if (!map.ContainsPoint(xCoordinate, yCoordinate))
-            {
-                Console.WriteLine("Rover could not be created at given coordinates");
-                return null;
-            }
-
             // Parse direction (default to North)
             char directionChar = parts[2][0];
             Direction direction = Direction.North;

@@ -23,7 +23,7 @@ namespace MarsRovers
 
             string[] parts = input.Split(' ');
             int width = int.Parse(parts[0]);
-            int height = int.Parse(parts[0]);
+            int height = int.Parse(parts[1]);
 
             return new MapGrid(width, height);
         }

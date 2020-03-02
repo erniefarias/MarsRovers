@@ -7,7 +7,7 @@ namespace MarsRoversTests
     public class RoverTests
     {
         [Fact]
-        public void NoParameterInitializeTest()
+        public void DefaultConstructorTest()
         {
             // Base rover with no parameters should start at (0,0), facing north
             var rover = new Rover();
@@ -16,7 +16,7 @@ namespace MarsRoversTests
         }
 
         [Fact]
-        public void CoordinateAndDirectionInitializeTest()
+        public void OverloadConstructorTest()
         {
             // Base rover with coordinates and direction should start with the
             // given coordinates and direction

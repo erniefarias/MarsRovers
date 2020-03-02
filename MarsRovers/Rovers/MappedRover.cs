@@ -25,6 +25,30 @@ namespace MarsRovers.Rovers
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="MappedRover"/> class on
+        /// the given map at the specified coordinates.
+        /// </summary>
+        /// <param name="map">Map to place rover on</param>
+        /// <param name="x">Initial X coordinate</param>
+        /// <param name="y">Initial Y coordinate</param>
+        /// <param name="direction">Initial direction to face; defaults to
+        /// North if not specified.</param>
+        /// <exception cref="InvalidOperationException"></exception>
+        public MappedRover(IMapGrid map, int x, int y,
+            Direction direction = Direction.North)
+        {
+            _map = map;
+            XCoordinate = x;
+            YCoordinate = y;
+            Direction = direction;
+
+            // Verify that the rover is in a valid position
+            if (!map.ContainsPoint(XCoordinate, YCoordinate))
+                throw new InvalidOperationException("Rover was placed outside" +
+                    " of map boundaries");
+        }
+
+        /// <summary>
         /// Moves the rover forward, when possible.
         /// </summary>
         /// <exception cref="InvalidOperationException"></exception>

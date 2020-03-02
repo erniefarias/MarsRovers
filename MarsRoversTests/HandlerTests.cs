@@ -30,7 +30,7 @@ namespace MarsRoversTests
             var map = InputHandler.CreateMap("5 5");
             var rover = InputHandler.CreateRover(map, "1 2 N");
             string result = InputHandler.CommandRover(rover, "LMLMLMLMM");
-            Assert.Equal<string>("1 3 N", result);
+            Assert.Equal("1 3 N", result);
         }
     }
 }
